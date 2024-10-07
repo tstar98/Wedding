@@ -6,15 +6,15 @@ RETURNS @GUESTS TABLE
 	[LastName] NVARCHAR(50),
 	[Phone] VARCHAR(10),
 	[Email] VARCHAR(50),
-	[DietaryRestrictions] NVARCHAR(250),
-	[DietaryRestrictionsUpdated] DATETIME,
 	[RsvpStatus] BIT,
-	[RsvpDate] DATETIME
+	[RsvpDate] DATETIME,
+	[DietaryRestrictions] NVARCHAR(250),
+	[DietaryRestrictionsUpdated] DATETIME
 )
 AS
 BEGIN
 	INSERT @GUESTS
-	SELECT Id, FirstName, LastName, Phone, Email, DietaryRestrictions, DietaryRestrictionsUpdated, RsvpStatus, RsvpDate
+	SELECT Id, FirstName, LastName, Phone, Email, RsvpStatus, RsvpDate, DietaryRestrictions, DietaryRestrictionsUpdated
 	FROM Guests
 	WHERE InvitationCode = @CODE;
 	RETURN;

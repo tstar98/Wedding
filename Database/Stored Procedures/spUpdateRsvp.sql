@@ -1,0 +1,25 @@
+﻿CREATE PROCEDURE [dbo].[spUpdateRsvp]
+	@ID INT,
+	@PHONE VARCHAR(10),
+	@EMAIL VARCHAR(50),
+	@RSVP BIT,
+	@DIETARY_RESTRICTIONS NVARCHAR(250)
+AS
+	UPDATE Guests
+	SET Phone = @PHONE, Email = @EMAIL
+	WHERE Id = @ID;
+
+	IF EXISTS (SELECT 1 FROM Guests WHERE Id = @ID AND RsvpStatus != @RSVP)
+	BEGIN
+		UPDATE Guests
+		SET RsvpStatus = @RSVP, RsvpDate = GETUTCDATE()
+		WHERE Id = @ID;
+	END
+
+	IF EXISTS (SELECT 1 FROM Guests WHERE Id = @ID AND DietaryRestrictions != @DIETARY_RESTRICTIONS)
+	BEGIN
+		UPDATE Guests
+		SET DietaryRestrictions = @DIETARY_RESTRICTIONS, DietaryRestrictionsUpdated = GETUTCDATE()
+		WHERE Id = @ID;
+	END
+RETURN 0

@@ -6,8 +6,8 @@
 	[LastName] NVARCHAR(50) NOT NULL,
 	[Phone] VARCHAR(10) NULL,
 	[Email] VARCHAR(50) NULL,
-	[DietaryRestrictions] NVARCHAR(250),
-	[DietaryRestrictionsUpdated] DATETIME,
 	[RsvpStatus] BIT NOT NULL DEFAULT 0,
-	[RsvpDate] DATETIME NULL
+	[RsvpDate] DATETIME NULL,
+	[DietaryRestrictions] NVARCHAR(250) NULL,
+	[DietaryRestrictionsUpdated] DATETIME NULL
 )
