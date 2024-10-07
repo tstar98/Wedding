@@ -64,6 +64,7 @@
   <ItemGroup>
     <Build Include="Tables\Guests.sql" />
     <Build Include="Indexes\i_Guests_InvitationCode.sql" />
+    <Build Include="Functions\fnGetGuestsByInvitationCode.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database.publish.xml" />
