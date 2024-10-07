@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wedding", "Wedding\Wedding.
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{6B752739-A130-4FED-B527-3E5E2E35178B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{DE050348-B76F-4960-A06D-887849134637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{6B752739-A130-4FED-B527-3E5E2E35178B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B752739-A130-4FED-B527-3E5E2E35178B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B752739-A130-4FED-B527-3E5E2E35178B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DE050348-B76F-4960-A06D-887849134637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE050348-B76F-4960-A06D-887849134637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE050348-B76F-4960-A06D-887849134637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE050348-B76F-4960-A06D-887849134637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
