@@ -7,6 +7,7 @@
 	[Phone] VARCHAR(10) NULL,
 	[Email] VARCHAR(50) NULL,
 	[DietaryRestrictions] NVARCHAR(250),
+	[DietaryRestrictionsUpdated] DATETIME,
 	[RsvpStatus] BIT NOT NULL DEFAULT 0,
 	[RsvpDate] DATETIME NULL
 )
