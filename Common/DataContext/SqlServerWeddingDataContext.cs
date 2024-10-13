@@ -9,7 +9,7 @@ namespace Common.DataContext;
 [CatchErrors]
 public class SqlServerWeddingDataContext : IWeddingDataContext
 {
-    public ILogger Logger;
+    public ILogger Logger { get; set; }
     private readonly SqlConnection connection;
     
     public SqlServerWeddingDataContext(IConfiguration config, ILoggerFactory loggerFactory)
