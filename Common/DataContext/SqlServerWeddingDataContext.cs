@@ -14,8 +14,9 @@ public class SqlServiceWeddingDataContext : IWeddingDataContext
     
     public SqlServiceWeddingDataContext(IConfiguration config, ILoggerFactory loggerFactory)
     {
-        Logger = loggerFactory.CreateLogger<SqlServiceWeddingDataContext>();
-        connection = new SqlConnection(config.GetConnectionString("Database"));
+        Logger = loggerFactory.CreateLogger<SqlServerWeddingDataContext>();
+        connection = new SqlConnection(connectionString);
+        connection.Open();
     }
 
     public async Task<bool> UpdateRsvp(Guest guest)
