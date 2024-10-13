@@ -39,7 +39,7 @@ public class SqlServerWeddingDataContext : IWeddingDataContext
     {
         List<Guest> guests = new List<Guest>();
         using SqlCommand command = new SqlCommand("SELECT Id, FirstName, LastName, Phone, Email, RsvpStatus, RsvpDate, DietaryRestrictions, " +
-            "DietaryRestrictionsUpdated FROM fnGetGuestsByInvitationVode(@CODE)", connection);
+            "DietaryRestrictionsUpdated FROM fnGetGuestsByInvitationCode(@CODE)", connection);
 
         command.Parameters.Add("@CODE", System.Data.SqlDbType.Char).Value = code;
         
