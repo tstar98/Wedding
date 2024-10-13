@@ -7,12 +7,12 @@ using System.Data.SqlClient;
 namespace Common.DataContext;
 
 [CatchErrors]
-public class SqlServiceWeddingDataContext : IWeddingDataContext
+public class SqlServerWeddingDataContext : IWeddingDataContext
 {
     public ILogger Logger;
     private readonly SqlConnection connection;
     
-    public SqlServiceWeddingDataContext(IConfiguration config, ILoggerFactory loggerFactory)
+    public SqlServerWeddingDataContext(IConfiguration config, ILoggerFactory loggerFactory)
     {
         Logger = loggerFactory.CreateLogger<SqlServerWeddingDataContext>();
         connection = new SqlConnection(connectionString);
