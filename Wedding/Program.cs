@@ -1,10 +1,13 @@
 using Wedding.Components;
+using Common.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<IWeddingDataContext, SqlServerWeddingDataContext>();
 
 var app = builder.Build();
 

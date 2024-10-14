@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [dbo].[fnGetGuestsByInvitationCode](@CODE char(5))
+﻿CREATE FUNCTION [dbo].[fnGetGuestsByInvitationCode](@CODE char(6))
 RETURNS @GUESTS TABLE
 (
 	[Id] INT,
