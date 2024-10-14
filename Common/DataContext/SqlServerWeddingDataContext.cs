@@ -15,7 +15,7 @@ public class SqlServerWeddingDataContext : IWeddingDataContext
     public SqlServerWeddingDataContext(IConfiguration config, ILoggerFactory loggerFactory)
     {
         Logger = loggerFactory.CreateLogger<SqlServerWeddingDataContext>();
-        connection = new SqlConnection(connectionString);
+        connection = new SqlConnection(config.GetConnectionString("Database"));
         connection.Open();
     }
 
